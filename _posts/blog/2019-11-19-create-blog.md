@@ -6,16 +6,21 @@ description: 将创建 blog 的过程记录下来
 keywords: blog
 ---
 
+本文是使用 jekyll 做为博客蓝本来开发自己的博客的一个主要流程的回顾与总结。  
+
 ## 选择博客蓝本  
-选择 jekyll 或其他。
+选择 jekyll 或其他。  
+
 ## 改变主题
-将主题改为 `某某` 的并做自定义话设置
+将主题改为 `某某` 的并做自定义话设置。  
+
 ## 配置评论
-未完成
+未完成  
+
 ## 可能遇到的错误
 在部署博客的时候，某天打开发现页面的结构发生混乱，打开控制台才发现一些静态资源请求失败，比如：  
 <div align="center">
-![静态文件确实](https://raw.githubusercontent.com/FrankWang1991/images/master/0RTV2u.png)
+    <img alt="静态文件缺失" src="https://raw.githubusercontent.com/FrankWang1991/images/master/0RTV2u.png">
 </div>
 ``` 
 GET https://frankwang1991.github.io/assets/vendor/primer-css/css/primer.css net::ERR_ABORTED 404
@@ -23,11 +28,11 @@ GET https://frankwang1991.github.io/assets/vendor/primer-css/css/primer.css net:
 而还有一些同样的静态资源却加载成功了，仔细查看了下，加载失败的静态文件目录全部是在项目的 `assets/vendor` 下面，然后查看了项目的目录，发现并没有此目录文件夹。  
 打开本地的代码库，发现此目录安安静静的躺着这里：  
 <div align="center">
-![vendor 本地目录](https://raw.githubusercontent.com/FrankWang1991/images/master/SmoABz.png)  
+    <img alt="vendor 本地目录" src="https://raw.githubusercontent.com/FrankWang1991/images/master/SmoABz.png">
 </div>
 那这问题很明显，找到了 `.gitignore` 文件：  
 <div align="center">
-![.gitignore](https://raw.githubusercontent.com/FrankWang1991/images/master/YFYnPh.png)  
+    <img alt=".gitignore 文件内容" src="https://raw.githubusercontent.com/FrankWang1991/images/master/YFYnPh.png">
 </div>
 将其中的 `vendor` 去掉即可。（CNAME 为自定义域名需要使用的，这里由于域名备案还未完成，先将 CNAME 文件放入此中来）。现在 `.gitignore` 应该是这个样子：
 
