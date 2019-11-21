@@ -16,6 +16,12 @@ keywords: blog,jekyll,创建博客,个人博客,GitHub pages
 
 ## 配置评论
 我们需要为博客中的文章配置评论功能，这个时候使用 `Gitment` 或者 `Gitalk` 就是比较方便的做法了。  
+**新增修改**：目前本人博客系统中使用 Gitment 初始化的时候会出现：
+<div align="center">
+    <img alt="gitment error" src="https://raw.githubusercontent.com/FrankWang1991/images/master/jHxmLw.png">
+</div>
+还是推荐使用 Gitale。
+**新增修改结束**。
 因为上文提到的两个评论系统都是基于 GitHub 的 issus。支持在前端直接引入，不需要任何后端代码。可以在页面进行登录、查看、评论、点赞等操作，同时有完整的 Markdown / GFM 和代码高亮支持。尤为适合各种基于 GitHub Pages 的静态博客或项目页面。  
 下面给出的链接是两者的官方 demo：  
     - Gitment demo ： [demo](https://imsun.github.io/gitment/)
