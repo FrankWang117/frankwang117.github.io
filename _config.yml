@@ -1,7 +1,7 @@
 # ---------------- #
 #   Main Configs   #
 # ---------------- #
-baseurl:
+baseurl: frankwang1991.github.io
 url: https://frankwang1991.github.io
 date_format: "ordinal"
 title: 前端酒馆🍺
