@@ -84,6 +84,9 @@ jobs:
 <img alt="编译命令运行状态" src="https://raw.githubusercontent.com/FrankWang1991/images/master/nSK1hp.png"></div>
 
 过一会查看我们设置的 `homepage` 的地址就可以看到我们的项目了：  
+<div align="center">
+<img alt="项目自动发布成功" src="https://raw.githubusercontent.com/FrankWang1991/images/master/51W5bT.png">
+</div>  
 
 ## 总结  
 如果知道了整个的配置文件，整个项目的配置过程还是很简单的。
