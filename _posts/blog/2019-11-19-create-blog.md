@@ -53,7 +53,11 @@ keywords: blog,jekyll,创建博客,个人博客,GitHub pages
 <div align="center">
 <img alt="申请 private key" src="https://raw.githubusercontent.com/FrankWang1991/images/master/VhlVHU.png" />
 </div>  
-所以我们需要按照提示，生成 `private key`。这时候我们的 `Client ID` 以及 `Client secret` 就可以使用了
+所以我们需要按照提示，生成 `private key`。这时候我们的 `Client ID` 以及 `Client secret` 就可以使用了。  
+
+对了既然主要作为评论来使用这个 GitHub App，那就不要忘了修改一些权限（在此 App 设置页面的左侧 sidebar 第二项）：  
+![Permissions & events](https://raw.githubusercontent.com/FrankWang1991/images/master/wFRov1.png).  
+
 更多详细的内容可以[参考官方文档](https://developer.github.com/apps/building-github-apps/creating-a-github-app/)
 
 ### 2. 设置博客配置信息
