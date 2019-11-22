@@ -6,7 +6,7 @@ description: 整数反转
 keywords: LeetCode, JavaScript
 ---
 
-# 7.整数反转
+# No.7 整数反转
 
 ## 题目  
 
