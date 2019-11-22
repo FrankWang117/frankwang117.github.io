@@ -28,7 +28,9 @@ keywords: blog,jekyll,创建博客,个人博客,GitHub pages
     - Gitalk demo: [demo](https://gitalk.github.io/)  
 
 现在来看看如何给自己的 jekyll 博客添加相应的评论功能吧（以 Gitalk 为例）.  
-### 1. 创建 Github App
+### 1. 创建 Github Oauth App  
+我们需要创建 Github OAuth App 来进行权限验证，可以点击 [此链接](https://github.com/settings/applications/new) 直达，也可以按照如下步骤：  
+
 在如图所示的 `Settings` 链接中：
 <div align="center">
     <img alt="设置第一步" src="https://raw.githubusercontent.com/FrankWang1991/images/master/github-setting.png">
@@ -37,28 +39,30 @@ keywords: blog,jekyll,创建博客,个人博客,GitHub pages
 <div align="center">
     <img alt="开发者设置" src="https://raw.githubusercontent.com/FrankWang1991/images/master/D3fiyl.png">
 </div>
-点击左侧 `sidebar` 中的 `Github Apps` ,而后点击 `create Github App` 按钮之后，可以看到如下的页面：  
+点击左侧 `sidebar` 中的 `Oauth Apps` ,而后点击 `New OAuth App` 按钮之后，可以看到如下的页面：  
 <div align="center">
-    <img alt="Create Github app" src="https://raw.githubusercontent.com/FrankWang1991/images/master/3UmFYJ.png">
+    <img alt="Create Github app" src="https://raw.githubusercontent.com/FrankWang1991/images/master/C4VkcT.png">
 </div>
 这就是我们需要为新的 GitHub App 配置的一些基础信息。  
-其中的一些信息的填写情况是：
-    - **GitHub App name** ： 输入应用名称，清晰简洁（a clear and succinct name）；
-    - **Description** ： 应用描述；
-    - **Homepage URL**： 应用地址的全称，这里填写的是 `https://frankwang1991.github.io`
-    - **User authorization callback URL** : 当用户权限验证之后的跳转路径，填写上文相同的地址即可
-    - **Webhook URL** ： 当发生 `Events` 时向此地址发送 post 请求，具体可看[此文档](https://github.com/diandianxiyu/PageBlog/blob/master/%E4%BD%BF%E7%94%A8Git%E7%9A%84Webhooks%E8%BF%9B%E8%A1%8C%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2%E4%BB%A3%E7%A0%81.md)
+其中的一些信息的填写情况是：  
 
-最后点击 `Create GitHub App` 按钮即可创建一个新的 GitHub App 了。但是这是我们看到页面会出现：  
+  - **Application name** ： 输入应用名称，用户能理解并信任（Something users will recognize and trust）
+  - **Application description** ： 应用描述
+  - **Homepage URL**： 应用地址的全称，这里填写的是 `https://frankwang1991.github.io`
+  - **Authorization callback URL** : 当用户权限验证之后的跳转路径，填写上文相同的地址即可
+  - ~~**Webhook URL** ： 当发生 `Events` 时向此地址发送 post 请求，具体可看[此文档](https://github.com/diandianxiyu/PageBlog/blob/master/%E4%BD%BF%E7%94%A8Git%E7%9A%84Webhooks%E8%BF%9B%E8%A1%8C%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2%E4%BB%A3%E7%A0%81.md)~~
+
+~~最后点击 `Register application` 按钮即可创建一个新的 GitHub OAuth App 了。但是这是我们看到页面会出现~~ 
 <div align="center">
 <img alt="申请 private key" src="https://raw.githubusercontent.com/FrankWang1991/images/master/VhlVHU.png" />
 </div>  
-所以我们需要按照提示，生成 `private key`。这时候我们的 `Client ID` 以及 `Client secret` 就可以使用了。  
+~~所以我们需要按照提示，生成 `private key`。这时候我们的 `Client ID` 以及 `Client secret` 就可以使用了。~~  
 
-对了既然主要作为评论来使用这个 GitHub App，那就不要忘了修改一些权限（在此 App 设置页面的左侧 sidebar 第二项）：  
+~~对了既然主要作为评论来使用这个 GitHub App，那就不要忘了修改一些权限（在此 App 设置页面的左侧 sidebar 第二项）~~
 ![Permissions & events](https://raw.githubusercontent.com/FrankWang1991/images/master/wFRov1.png).  
 
-更多详细的内容可以[参考官方文档](https://developer.github.com/apps/building-github-apps/creating-a-github-app/)
+~~更多详细的内容可以[参考官方文档](https://developer.github.com/apps/building-github-apps/creating-a-github-app/)~~  
+划掉的部分是生成 GitHub App 使用的，生成 GitHub OAuth App 则不需要更多的操作。  
 
 ### 2. 设置博客配置信息
 有了上面生成的 `Client ID` 以及 `Client secret` ，我们就需要向页面中添加相应的 `Gitalk` 代码了。  
