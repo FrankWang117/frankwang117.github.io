@@ -7,7 +7,7 @@ date_format: "ordinal"
 title: 前端酒馆🍺
 subtitle: "Go Big or Go Home"
 description: "王森的个人博客"
-keywords: 博客, 前端博客, 王森, wangsen
+keywords: 前端酒馆,javascript,frontend,fe,blog,blogs,博客, 前端博客, 王森, wangsen
 timezone: Asia/Shanghai
 encoding: "utf-8"
 side_bar_repo_limit: 5
@@ -116,7 +116,7 @@ simple_jekyll_search:
     # 是否支持全文搜索
     fulltext: false
     # 最多显示多少条搜索结果
-    limit: 10
+    limit: 6
 
 # ---------------- #
 #    Analytics     #
