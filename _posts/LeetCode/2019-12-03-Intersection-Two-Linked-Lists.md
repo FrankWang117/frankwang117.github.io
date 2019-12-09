@@ -3,7 +3,7 @@ layout: post
 title: LeetCode No.160 相交链表
 categories: [LeetCode]
 description: 相交链表
-keywords: LeetCode, JavaScript
+keywords: LeetCode, JavaScript, Intersection 
 ---
 
 # No.160 相交链表
@@ -12,7 +12,7 @@ keywords: LeetCode, JavaScript
 
 编写一个程序，找到两个单链表相交的起始节点。  
 
-![相交链表示例](https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/12/14/160_statement.png)  
+![相交链表示例](https://raw.githubusercontent.com/FrankWang1991/images/master/AnaYhX.png)  
 
 上图两个链表在节点 c1 开始相交。  
 
