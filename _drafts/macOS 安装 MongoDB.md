@@ -43,7 +43,11 @@ source .bash_profile
 ![data/db 文件夹地址](https://raw.githubusercontent.com/FrankWang1991/images/master/T3gxc0.png) 
 ## 3. 启动服务  
 
-
+使用 terminal 工具输入命令 
+``` command 
+sudo mongod
+``` 
+启动服务。如果遇到报错，请检查是否使用 sudo 命令。(记住要加sudo,不加会提示权限错误),输入密码就可以看到启动日志了
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM4MTk0NTE0M119
+eyJoaXN0b3J5IjpbLTczMDk3MDcsMTM4MTk0NTE0M119
 -->
