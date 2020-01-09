@@ -56,9 +56,15 @@ mongo
 ``` 
 命令就可以进入 mogodb 环境了.
 ## 4. 关闭服务
-
-1.使用命令  **use admin**切换到admin  
-2.使用命令  **db.shutdownServer();**  关闭mogodb服务
+想要关闭 MongoDB 服务，首先需要使用命令 
+``` command 
+use admin
+``` 
+切换到 admin 用户，然后，使用命令：
+``` command
+db.shutdownServer()
+``` 
+关闭 MongoDB 服务。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIyMDA2Mjg4NCwxMzgxOTQ1MTQzXX0=
+eyJoaXN0b3J5IjpbMTgzNTM3NTkwMCwxMzgxOTQ1MTQzXX0=
 -->
