@@ -54,7 +54,11 @@ sudo mongod
 ``` command  
 mongo
 ``` 
-命令就可以进入 mogodb 环境了
+命令就可以进入 mogodb 环境了.
+## 4. 关闭服务
+
+1.使用命令  **use admin**切换到admin  
+2.使用命令  **db.shutdownServer();**  关闭mogodb服务
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MjE4MjcwNTIsMTM4MTk0NTE0M119
+eyJoaXN0b3J5IjpbMTIyMDA2Mjg4NCwxMzgxOTQ1MTQzXX0=
 -->
