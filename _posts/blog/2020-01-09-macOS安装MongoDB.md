@@ -1,4 +1,13 @@
-# Mac 上安装使用 MongoDB
+---
+layout: post
+title: macOS 上安装使用 MongoDB
+categories: [开发相关,CURD,MongoDB]
+description: 为前端 CURD 迈出重要一步的 MongoDB的安装与使用
+keywords: CURD, macOS , MongoDB ,mongo,db ,前端curd
+---
+
+为了实现前端对简单数据进行 CURD，而迈出的重要一步。  
+
 ## 1. 下载 MongoDB
 官网下载地址 [点击此处访问](https://www.mongodb.com/download-center/community?jmp=nav)，可以看到：
 ![mongodb download page](https://raw.githubusercontent.com/FrankWang1991/images/master/ajcDdg.png)
@@ -65,6 +74,3 @@ use admin
 db.shutdownServer()
 ``` 
 关闭 MongoDB 服务。
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgzNTM3NTkwMF19
--->
