@@ -66,5 +66,5 @@ db.shutdownServer()
 ``` 
 关闭 MongoDB 服务。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgzNTM3NTkwMCwxMzgxOTQ1MTQzXX0=
+eyJoaXN0b3J5IjpbMTgzNTM3NTkwMF19
 -->
