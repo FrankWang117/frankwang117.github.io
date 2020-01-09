@@ -50,6 +50,11 @@ sudo mongod
 启动服务。如果遇到报错，请检查是否遗漏 sudo 命令。输入密码就可以看到启动日志了：
 ![启动日志](https://raw.githubusercontent.com/FrankWang1991/images/master/Ws21OS.png) 
 
+再重新打开一个 terminal 工具（`command + N`）输入 ：
+``` command  
+mongo
+``` 
+命令就可以进入 mogodb 环境了
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTU1Njc3MDMxLDEzODE5NDUxNDNdfQ==
+eyJoaXN0b3J5IjpbLTE4MjE4MjcwNTIsMTM4MTk0NTE0M119
 -->
