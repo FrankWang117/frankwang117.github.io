@@ -8,7 +8,12 @@ keywords: 数据结构与算法, JavaScript, 链表, Linked List
 
 主要是将自己在学习数据结构与算法中的一些比较常用的知识点归纳总结。  
 
-## 什么是链表。  
+[code resource](https://codepen.io/frankbar/pen/yLyjpvP?editors=0111)
+
+**未完成**
+
+## 1. 什么是链表。  
+
 来看一下 LeetCode 上对链表的描述：  
 
  > 链表（Linked List）是一种常见的基础数据结构，是一种线性表，但是并不会按线性的顺序存储数据，而是在每一个节点里存到下一个节点的指针（Pointer）。
@@ -27,7 +32,7 @@ keywords: 数据结构与算法, JavaScript, 链表, Linked List
 以上大概就是对链表的一个说明，那用代码来展示一个链表的话是什么样子呢?  
 我们先从一个简单的单向链表尝试做一下：
 
-## 链表的表现形式
+## 2. 链表的表现形式
 
 ``` javascript
 const linkedList = {
@@ -48,42 +53,127 @@ const linkedList = {
 
 既然知道了链表的展现形式，那就尝试使用代码将链表生成：  
 
-## 链表的生成  
+## 3. 链表的生成  
 
 ``` javascript
 // 节点
-function ListNode(value) {
-    this.value = value
-    this.next = null
+class LinkedNode {
+    value: any 
+    next: any
+    constructor(nodeValue) {
+        this.value = nodeValue;
+        this.next = null
+    }
 }
 // 链表
 class LinkedList {
-    constructor(value) {
-        this.head = new ListNode(value)
+    constructor() {
+        // 生成链表头部，链表头部的数据域中可以不存储任何信息
+        // 也可以存储链表长度等信息
+        this.head = new LinkedNode("")
     }
+	head: LinkedNode 
 }
 ```
 
-## 链表的操作
+## 4. 链表的操作
 链表也应该支持查询 / 插入 / 删除 等操作，先来实现链表的查询：  
 
-### 链表的查询 
+### 4.1 链表的查询 
+
+
+
+
 
 ``` javascript
-LinkedList.prototype.find = function ( value ) {
-    let curNode = this.head;
-    while ( curNode.value != value ){
-        curNode = curNode.next;
+    /**
+     * @author Frank Wang
+     * @method
+     * @name find
+     * @description 查询链表中是否有符合条件的节点
+     * @param nodeValue {any} 所要查询的 node 节点的 value 值
+     * @return {LinkedNode}
+     * @example 创建例子。
+     * @public
+     */
+    find(nodeValue:any) {
+        let curNode:LinkedNode = this.head
+
+        while( curNode.value != nodeValue ) {
+            if(!curNode.next) {
+                // 如果到链表尾部还没有循环到符合条件的节点
+                // 则返回 value 值为 error 对象的节点
+                return new LinkedNode(new Error("无此节点"))
+            }
+            curNode = curNode.next
+        }
+        return curNode
     }
-    return curNode;
-}
 ```
 主要是一个内部的循环，遍历整个链表，判断当前节点的 `value` 值是否与要查找的值相同。  
-既然有了查找，那我们删除某一节点就有思路了：
+既然有了查找，那我们向链表中插入某一节点就有思路了：
 
-### 删除链表中某一节点  
+### 4.2 向链表中插入节点
+
+向传入的节点的后方插入节点
 
 ``` javascript
+    /**
+     * @author Frank Wang
+     * @method
+     * @name insert
+     * @description 向链表中插入节点
+     * @param nodeValue 已经存在的 node 节点的 value
+     * @param value 向链表中插入的节点的 value
+     * @return {LinkedNode}
+     * @example 创建例子。
+     * @public
+     */
+    insert(nodeValue:any,value:any) {
+        let newNode:LinkedNode = new LinkedNode(value)
+        let curNode:LinkedNode = this.find(nodeValue)
+        newNode.next = curNode.next
+        curNode.next = newNode
+        return newNode
+    }
+```
+
+插入的方法，接受两个参数，一个是已存在的 node 节点的 value，一个是需要插在 node 节点后的节点的 value。函数体首先是根据传入的 value 创建一个 node 实例，以及找到需要插入的node节点。然后将当前节点的 next 赋值给新的节点实例，在将新节点，赋值给当前节点的 next 值。尤其注意这两步的操作，是不能调换的，可以想像为什么。
+
+### 4.3 展示链表
+
+插入链表之后我们肯定是想知道链表的当前情况，或者是我们在某个时刻想要查看链表的情况，那我们就需要一个方法来展示链表：
+
+``` javascript
+    /**
+     * @author Frank Wang
+     * @method
+     * @name console
+     * @description 将链表所有的值在控制台打印出来
+     * @param 
+     * @return {LinkedNode}
+     * @example 创建例子。
+     * @public
+     */
+    console() {
+        let currNode:LinkedNode = this.head;
+        while ( !currNode.next ){
+            console.log( currNode.next.value );
+            currNode = currNode.next;
+        }
+        return this.head
+    }
+```
+
+同样的我们还会遇到删除某一节点的需求：
+
+### 4.4 删除链表中某一节点  
+
+在解决这个需求之前，我们可以先来分析一下，如何删除一个链表中的节点，就是将此节点的上一节点的 next 指向当前节点的 next。
+
+所以如果我们要删除某一节点，那么我们就需要知道当前节点的上一个节点
+
+```javascript
 LinkedList.prototype.remove = function ( value ) {
     let curNode = this.head
     let prevNode 
@@ -104,4 +194,9 @@ LinkedList.prototype.remove = function ( value ) {
     prevNode.next = curNode.next
 }
 ```
+
 解释一下上面的逻辑：首先是定义一个当前节点，方便进行遍历。还有一个上一节点 `prevNode` 默认为 `undefined`，然后是对链表进行遍历，每一次遍历都会修改当前的节点 `curNode` 以及 `prevNode` ,直到当前节点的值是要删除的节点的值，那么退出循环，同时将上一节点的 `next`，改为当前节点 `curNode` 的 `next`，亦或者写做 `prevNode.next = prevNode.next.next`。其他的判断就是当是尾节点时返回 `false`，当是 `head` 节点时，就使用 `head.next`替换 `head` 节点；
+
+除了删除我们还会遇到向链表中插入节点的情况： 
+
+### 
