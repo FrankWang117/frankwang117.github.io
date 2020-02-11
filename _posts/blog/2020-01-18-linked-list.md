@@ -274,7 +274,8 @@ class LinkedList {
   - 把 s 赋值给 p 的后继
 
 
-## 5. 总结
+## 7. 总结  
+
 <table>
     <thead>
         <th colspan="5" style="text-align:center">线性表</th>
@@ -295,5 +296,6 @@ class LinkedList {
             <td>双向链表</td>
         </tr>
     </tbody>
-</table>
+</table>  
+
 这是链表属于线性表的两大结构之一：链式存储结构。
