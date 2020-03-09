@@ -6,8 +6,7 @@ description: 从 D3 最基础的部分讲起，一步一步深入 D3 的世界�
 keywords: d3.js, emberjs , typescript , 柱状图 , 饼图
 ---
 
-如何在 emberjs 项目中使用 D3.js？或许本文可以给你点思路。  
-
+如何在 emberjs 项目中使用 D3.js？或许本文可以给你点思路.  
 
 > ember-cli v3.16.0  
 > node 10.16.0
@@ -21,9 +20,9 @@ keywords: d3.js, emberjs , typescript , 柱状图 , 饼图
 
 以上三点转过来以后，基本算理解d3背后的思路了，大约看文档也可以独立写点东西出来了。d3的使用模式如下：
 
-	- step1：准备数据
-	- step2：创建dom
-	- step3：设置属性
+    - step1：准备数据
+    - step2：创建dom
+    - step3：设置属性
 
 作者：ciga2011 ， [来源](https://www.zhihu.com/question/22171866/answer/22512521)
 ## 1. 前期工作
@@ -574,25 +573,25 @@ transition 等动画在 d3 中添加是很容易的，和 css3 中的动画大�
 /**
  * 添加柱状图
  */
-	// svg.selectAll('rect')
-	//     .data(DATASET)
-	//     .enter()
-	//     .append('rect')
-	//     .classed('bp-bar-rect', true)
-	//     .attr("transform", `translate(${padding.left},${ padding.top})`)
-	//     .attr('x', (d) => {
-	//         return xScale(d[0]) + xScale.bandwidth() / 2 - barWidth / 2
-	//     })
-	//     .attr('y', (d) => yScale(d[1]))
-	//     .attr('width', barWidth + "px")
-	//     .attr('height', (d) => height - padding.top - padding.bottom - yScale(d[1]))
-	//     .text((d: any) => d[4]);
+    // svg.selectAll('rect')
+    //     .data(DATASET)
+    //     .enter()
+    //     .append('rect')
+    //     .classed('bp-bar-rect', true)
+    //     .attr("transform", `translate(${padding.left},${ padding.top})`)
+    //     .attr('x', (d) => {
+    //         return xScale(d[0]) + xScale.bandwidth() / 2 - barWidth / 2
+    //     })
+    //     .attr('y', (d) => yScale(d[1]))
+    //     .attr('width', barWidth + "px")
+    //     .attr('height', (d) => height - padding.top - padding.bottom - yScale(d[1]))
+    //     .text((d: any) => d[4]);
 
 /**
  * 为柱状图添加动画
  */
 const t = transition()
-	.ease();
+    .ease();
 
 svg.selectAll('rect')
     .data(DATASET)
@@ -601,8 +600,8 @@ svg.selectAll('rect')
     .classed('bp-bar-rect', true)
     .attr("transform", `translate(${padding.left},${padding.top})`)
     .attr('x', (d) => {
-    	return xScale(d[0]) + xScale.bandwidth() / 2 - barWidth / 2
-	})
+        return xScale(d[0]) + xScale.bandwidth() / 2 - barWidth / 2
+    })
     .attr('y', height - padding.bottom-24) // 24 为x坐标轴的高度
     .attr('width', barWidth + "px")
     .attr('height',0)
@@ -621,8 +620,8 @@ svg.selectAll('rect')
 ``` ts
 svg.selectAll('rect')
     .on('mouseover', function (d, i: number) {
-    	// 保证修改的元素的 fill 不是在 class 中
-    	// 而是通过 attr('fill',value) 定义的
+        // 保证修改的元素的 fill 不是在 class 中
+        // 而是通过 attr('fill',value) 定义的
         select(this).attr("fill", "#FFC400")
     })
     .on('mouseout', function (d, i) {
@@ -763,40 +762,40 @@ export default class D3BpPie extends Component<D3BpPieArgs> {
 
 ``` json
 [{
-	"data": ["癫痫竞品1", 2575385.5, null, "0.1952"],
-	"index": 0,
-	"value": 2575385.5,
-	"startAngle": 0,
-	"endAngle": 1.2261668298428863,
-	"padAngle": 0
+    "data": ["癫痫竞品1", 2575385.5, null, "0.1952"],
+    "index": 0,
+    "value": 2575385.5,
+    "startAngle": 0,
+    "endAngle": 1.2261668298428863,
+    "padAngle": 0
 }, {
-	"data": ["开浦兰", 679346.1875, null, "0.0515"],
-	"index": 1,
-	"value": 679346.1875,
-	"startAngle": 1.2261668298428863,
-	"endAngle": 1.5496103535766053,
-	"padAngle": 0
+    "data": ["开浦兰", 679346.1875, null, "0.0515"],
+    "index": 1,
+    "value": 679346.1875,
+    "startAngle": 1.2261668298428863,
+    "endAngle": 1.5496103535766053,
+    "padAngle": 0
 }, {
-	"data": ["癫痫竞品2", 279866.65625, null, "0.0212"],
-	"index": 2,
-	"value": 279866.65625,
-	"startAngle": 1.5496103535766053,
-	"endAngle": 1.6828576715695005,
-	"padAngle": 0
+    "data": ["癫痫竞品2", 279866.65625, null, "0.0212"],
+    "index": 2,
+    "value": 279866.65625,
+    "startAngle": 1.5496103535766053,
+    "endAngle": 1.6828576715695005,
+    "padAngle": 0
 }, {
-	"data": ["维派特", 0, null, "0.0000"],
-	"index": 3,
-	"value": 0,
-	"startAngle": 1.6828576715695005,
-	"endAngle": 1.6828576715695005,
-	"padAngle": 0
+    "data": ["维派特", 0, null, "0.0000"],
+    "index": 3,
+    "value": 0,
+    "startAngle": 1.6828576715695005,
+    "endAngle": 1.6828576715695005,
+    "padAngle": 0
 }, {
-	"data": ["其他竞品", 9662320.65625, null, "0.7322"],
-	"index": 4,
-	"value": 9662320.65625,
-	"startAngle": 1.6828576715695005,
-	"endAngle": 6.283185307179586,
-	"padAngle": 0
+    "data": ["其他竞品", 9662320.65625, null, "0.7322"],
+    "index": 4,
+    "value": 9662320.65625,
+    "startAngle": 1.6828576715695005,
+    "endAngle": 6.283185307179586,
+    "padAngle": 0
 }]
 ```
 
