@@ -6,7 +6,7 @@ description:  No.804 唯一摩尔斯密码词
 keywords: LeetCode, JavaScript, unique-morse-code-words, 唯一摩尔斯密码词
 ---
 
-# No.804. 唯一摩尔斯密码词  
+# No.804 唯一摩尔斯密码词  
   
 使用了字符串的一些操作,以及 hash 表用来处理唯一的问题.  
 
@@ -55,8 +55,9 @@ var uniqueMorseRepresentations = function(words) {
 ## 思路
 显示将数组中的所有的字符串通过便利操作转换为摩尔斯码,然后使用 hash 去掉重复的摩尔斯码并记录摩尔斯码出现的次数:  
 
-## 解答
+## 解答  
 
+```javascript
 /**
  * @param {string[]} words
  * @return {number}
