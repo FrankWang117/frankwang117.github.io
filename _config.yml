@@ -1,8 +1,8 @@
 # ---------------- #
 #   Main Configs   #
 # ---------------- #
-baseurl: 
-url: https://frankwang1991.github.io
+baseurl:
+url: https://frankwang117.github.io
 date_format: "ordinal"
 title: 前端酒馆🍺
 subtitle: "Go Big or Go Home"
@@ -16,9 +16,9 @@ side_bar_repo_limit: 5
 #      Author      #
 # ---------------- #
 author: Sen Wang
-organization: 
-organization_url: 
-github_username: frankwang1991
+organization:
+organization_url:
+github_username: frankwang117
 location: BeiJing, China
 email: wangsen9108@gmail.com
 
@@ -26,28 +26,23 @@ email: wangsen9108@gmail.com
 #    Navigation    #
 # ---------------- #
 navs:
-  -
-    href: /
+  - href: /
     label: 首页
 
-  -
-    href: /categories/
+  - href: /categories/
     label: 分类
 
-#   -
-#     href: /archives/
-#     label: 归档
+  #   -
+  #     href: /archives/
+  #     label: 归档
 
-  -
-    href: /wiki/
+  - href: /wiki/
     label: 维基
 
-  -
-    href: /links/
+  - href: /links/
     label: 链接
 
-  -
-    href: /about/
+  - href: /about/
     label: 关于
 
 # ---------------- #
@@ -60,7 +55,7 @@ subscribe_rss: /feed.xml
 # ---------------- #
 markdown: kramdown
 kramdown:
-    input: GFM
+  input: GFM
 highlighter: rouge
 paginate: 10
 lsi: false
@@ -68,20 +63,20 @@ quiet: false
 excerpt_separator: "\n\n"
 permalink: /:year/:month/:day/:title/
 gems:
-    - jekyll-github-metadata
-    - rouge
-#     - jekyll-html-pipeline
-    - jekyll-paginate
-    - jekyll-sitemap
-    - jekyll-feed
-    - jemoji
+  - jekyll-github-metadata
+  - rouge
+  #     - jekyll-html-pipeline
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-feed
+  - jemoji
 #     - jekyll-mentions
 collections:
-    wiki:
-        output: true
-        permalink: /wiki/:path/
+  wiki:
+    output: true
+    permalink: /wiki/:path/
 
-repository: frankwang1991.github.io
+repository: frankwang117.github.io
 
 # ---------------- #
 #      Comments    #
@@ -92,34 +87,34 @@ comments_provider: gitalk
 # !!!Important!!! Please modify infos below to yours
 # https://disqus.com
 disqus:
-    username: 
+  username:
 # https://imsun.net/posts/gitment-introduction/
 gitment:
-    owner: frankwang1991
-    repo: frankwang1991.github.io
-    oauth:
-        client_id: 0795e34a389fc5f25ee7
-        client_secret: 281e22bcd0e4b97cc60e70aa5b5a4cae49523eb5
+  owner: frankwang117
+  repo: frankwang117.github.io
+  oauth:
+    client_id: 0795e34a389fc5f25ee7
+    client_secret: 281e22bcd0e4b97cc60e70aa5b5a4cae49523eb5
 # https://github.com/gitalk/gitalk#install
 gitalk:
-    owner: frankwang1991
-    repo: frankwang1991.github.io
-    clientID: 0795e34a389fc5f25ee7
-    clientSecret: 281e22bcd0e4b97cc60e70aa5b5a4cae49523eb5
+  owner: frankwang117
+  repo: frankwang117.github.io
+  clientID: 0795e34a389fc5f25ee7
+  clientSecret: 281e22bcd0e4b97cc60e70aa5b5a4cae49523eb5
 # 在使用其它评论组件时可点击显示 Disqus
-lazy_load_disqus : false
+lazy_load_disqus: false
 
 # ---------------- #
 #      Search      #
 # ---------------- #
 simple_jekyll_search:
-    # 是否支持全文搜索
-    fulltext: false
-    # 最多显示多少条搜索结果
-    limit: 6
+  # 是否支持全文搜索
+  fulltext: false
+  # 最多显示多少条搜索结果
+  limit: 6
 
 # ---------------- #
 #    Analytics     #
 # ---------------- #
 google:
-    analytics_id: UA-152886830-1
+  analytics_id: UA-152886830-1
