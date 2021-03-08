@@ -1,6 +1,6 @@
 # GO BIG or GO HOME
 
-我的个人博客：<https://frankwang1991.github.io>，欢迎 Star 。
+我的个人博客：<https://frankwang117.github.io>。
 
 ## 概览
 
@@ -13,7 +13,7 @@
 
 ## 效果预览
 
-**[在线预览 &rarr;](https://frankwang1991.github.io)**
+**[在线预览 &rarr;](https://frankwang117.github.io)**
 
 ![screenshot home](https://mazhuang.org/assets/images/screenshots/home.png)
 
