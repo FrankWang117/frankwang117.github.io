@@ -163,6 +163,8 @@ async(es8) 的定义见[此处](https://developer.mozilla.org/zh-CN/docs/Learn/J
       	<li>检查微任务队列，无可执行的微任务， 第二次循环结束</li>
       </ul>
     </li>
+  </ul>
+</details>
 
 > 注意：async/await 底层是基于 Promise 封装的，所以 await 前面的代码相当于 new Promise，是同步进行的，await 后面的代码相当于.then 回调，才是异步进行的。
 
